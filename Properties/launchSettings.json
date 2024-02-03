@@ -25,7 +25,10 @@
       "applicationUrl": "https://localhost:7075;http://localhost:5095",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DEFAULT_COOKIE_HOUR_DURATION": "1"
+        "DEFAULT_COOKIE_HOUR_DURATION": "1",
+        "DATABASE_CONNECTION_STRING": "mongodb://techboytools:<password>@localhost:27017",
+        "DATABASE_NAME": "techboytools",
+        "DATABASE_USER_COLLECTION_NAME": "Users"
       }
     },
     "IIS Express": {

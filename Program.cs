@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         x.LoginPath = "/Auth/Login";
         x.LogoutPath = "/Auth/Logout";
     });
+builder.Services.AddSingleton<UsersService>();
 
 var app = builder.Build();
 
