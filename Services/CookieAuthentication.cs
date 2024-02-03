@@ -8,9 +8,9 @@ namespace web.Services;
 
 public static class CookieAuthentication
 {
-    public static async Task<bool> Login(HttpContext httpContext, User user)
+    public static async Task<bool> Login(HttpContext httpContext, UsersService usersService, User user)
     {
-        var authenticatedUser = UserRepository.AuthenticateUser(user.Email, user.Password);
+        var authenticatedUser = await usersService.LoginAsync(user.Email, user.Password);
 
         if(authenticatedUser == null || string.IsNullOrEmpty(authenticatedUser.Email)){
             return false;

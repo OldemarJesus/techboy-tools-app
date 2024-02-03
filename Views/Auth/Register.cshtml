@@ -1,4 +1,5 @@
-﻿@{
+﻿@model User
+@{
     ViewData["Title"] = "Register";
 }
 
@@ -7,19 +8,19 @@
         <div class="card-title text-center">
             <h1>Register</h1>
         </div>
-        <form asp-action="Login" asp-controller="Auth" method="post">
+        <form asp-action="Register" asp-controller="Auth" method="post">
             <div class="card-body">
                 <div class="form-group">
                     <label for="full_name">Full name</label>
-                    <input type="text" id="full_name" class="form-control" placeholder="Enter full name">
+                    <input type="text" id="full_name" class="form-control" placeholder="Enter full name" asp-for="FullName">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" class="form-control" placeholder="Enter email">
+                    <input type="email" id="email" class="form-control" placeholder="Enter email" asp-for="Email">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="Password">
+                    <input type="password" id="password" class="form-control" placeholder="Password" asp-for="Password">
                 </div>
             </div>
             <div class="card-footer">
