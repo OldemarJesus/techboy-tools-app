@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="container w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="card w-100" style="max-width: 600px">
+        <div class="card-title text-center">
+            <h1>Login</h1>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" class="form-control"placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Password">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a asp-controller="Auth" asp-action="Register" class="link-opacity-100">Do not have account?</a>
+        </div>
+    </div>
+</div>
